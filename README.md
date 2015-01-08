@@ -1,3 +1,6 @@
+## Updated by asamix
+update dragonfly version to ~>1.0
+
 # activeadmin-dragonfly
 
 ### :warning: Unmaintained :warning:
