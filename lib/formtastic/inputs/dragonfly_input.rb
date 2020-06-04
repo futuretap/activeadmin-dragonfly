@@ -109,9 +109,8 @@ module Formtastic
       def fragment_remove_html
         if object.send("#{method}_uid")
           template.content_tag(:label, for: fragment_id(:remove)) do
-            builder.check_box("remove_#{method}") <<
-            " ".html_safe <<
-            I18n.t("dragonfly.remove")
+            builder.hidden_field("remove_#{method}") <<
+            template.link_to('🗑', "javascript: document.querySelector('##{fragment_id(:input)} .component-remove input').value = 1; document.querySelector('##{fragment_id(:input)} .component-preview').hidden = true; document.querySelector('##{fragment_id(:input)} .component-remove').hidden = true;")
           end
         end
       end

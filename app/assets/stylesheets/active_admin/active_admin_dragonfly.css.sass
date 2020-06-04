@@ -1,12 +1,8 @@
 @import bourbon
 
 .input.dragonfly
-  padding: 0
 
   .fragments
-
-    &> legend
-      display: none
 
     ol
 
@@ -15,13 +11,12 @@
 
         label
           text-align: right
+          display: none
 
         &.component-remove
           label
-            padding-left: 110px
+            display: inline
             width: auto
-            float: none
-            text-align: left
 
         &.component-preview
           &> a
@@ -34,6 +29,10 @@
 
             img
               display: block
+
+        &.component-remove
+          a
+            text-decoration: none
 
   .component-preview
     .no-image
